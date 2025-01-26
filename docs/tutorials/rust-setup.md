@@ -3,6 +3,7 @@
 ### Attributions:
 
 * Primary author: [Paige Pan](https://github.com/ppan1229)
+* Reviewer: [Baotran Nguyen](https://github.com/bnln7)
 
 ### Prerequisites
 For this tutorial, you will need the following:
