@@ -126,6 +126,13 @@ fn main()
 
 7. You can use `cargo run` if you want to skip the steps of finding and running the compiled file when you use `cargo build`. Make sure you're still in the `hello_world` directory. This command compiles (if needed) and runs your program all in one step. 
 
+8. Add, commit, and push all of your changes to your GitHub repository.
+``` title="terminal"
+git add .
+git commit -m "Finished setting up dev container for Rust."
+git push -u origin main
+```
+
 🎉 **Congratulations! You are done with your first dev container and Rust project!**🎉
 
 ### References
