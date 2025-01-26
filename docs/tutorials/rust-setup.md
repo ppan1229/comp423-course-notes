@@ -105,13 +105,13 @@ git push --set-upstream origin main
 
 Now, you are ready to test out Rust with a simple "Hello World" project :)
 
-1. Change to your directory with `cd rust-tutorial`.
+1. Change to your directory, if you're not already in it, with `cd rust-tutorial`.
 
-2. Use `cargo new hello_world --vcs none` to create a binary project. `cargo new` creates a new directory named `hello_world` in the current location. `--vcs none` ensures that no new git repository is initialized.
+2. Use `cargo new hello_world --vcs none` to create a binary project. `cargo new` creates a new directory named `hello_world` in the current location. You should see this directory pop up in your file explorer! `--vcs none` ensures that no new git repository is initialized.
 
 3. Check out your new directory! Navigate to `src/main.rs`.
 
-4. Add the following code to `main.rs` and save your file.
+4. The code should automatically be inside `main.rs`. If not, add the following code to `main.rs` and save your file.
 ``` title="main.rs"
 fn main() 
 {
@@ -119,10 +119,12 @@ fn main()
 }
 ```
 
-5. Use `cargo build` to compile the program. You can now run the compiled file outputted by using `./target/debug/hello_world`. `cargo build` does not run the executable file for you.
+5. `cd hello_world`. 
+
+6. Use `cargo build` to compile the program. You can now run the compiled file outputted by using `./target/debug/hello_world`. `cargo build` does not run the executable file for you.
     1. `cargo build` is similar to COMP 211's `gcc`, which is used to mainly compile C and C++. Both commands compile source code files and output executables. However, `gcc` does not include built-in dependency or package management like `cargo`.
 
-6. You can use `cargo run` if you want to skip the steps of finding and running the compiled file when you use `cargo build`. This command compiles (if needed) and runs your program all in one step. 
+7. You can use `cargo run` if you want to skip the steps of finding and running the compiled file when you use `cargo build`. Make sure you're still in the `hello_world` directory. This command compiles (if needed) and runs your program all in one step. 
 
 🎉 **Congratulations! You are done with your first dev container and Rust project!**🎉
 
