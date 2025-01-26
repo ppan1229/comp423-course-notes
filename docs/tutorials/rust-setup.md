@@ -67,3 +67,32 @@ git branch -M main
 git push --set-upstream origin main 
 ```
 6. Now, if you refresh your GitHub repository page, you should see the commit you just pushed to remote. As you continue to commit and push changes, you can use `git log` to view your project history.
+
+### Part 3: Creating and Opening a Dev Container
+
+#### Creating the Dev Container
+
+1. Open your `rust-tutorial` directory in VS Code.
+2. Navigate to extensions and install **Dev Containers**. 
+3. At the root of your directory, create a new `.devcontainer` directory using `mkdir` again. In this new directory, add a new file named `devcontainer.json`. This file defines the configuration for your development environment. Though it can be customized, we'll give you everything you need for now. Add the following content to your file:
+``` 
+{
+  "name": "Rust Tutorial",
+  "image": "mcr.microsoft.com/devcontainers/rust:latest",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": ["rust-lang.rust-analyzer"]
+    }
+  },
+  "postCreateCommand": "rustc --version"
+}
+```
++ `name` is the name of your dev container.
++ `image` is the Docker image to use. A Docker image contains all of the files needed to run a container. In this case, we're using a base image of Rust from Microsoft.
++ `customizations` adds extensions and other useful configurations that other developers will need to work on your project.
++ `postCreatecommand` is the command that runs after your container is created. In this case, we check that we have the most recent version of Rust.
+
+#### Opening the Dev Container
+
+1. Reopen the project in the container by pressing `Ctrl + Shift + P` on Windows, or `Cmd + Shift + P` on Mac. Type in "Dev Containers: Reopen in Container" and select the option. After the setup concludes, close your current terminal and open a new one. Running `rustc --version` will show that your dev container is running a recent version of Rust! 🎉
