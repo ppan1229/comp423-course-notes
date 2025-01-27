@@ -111,11 +111,11 @@ Now, you are ready to test out Rust with a simple "Hello World" project :)
 
 3. Check out your new directory! Navigate to `src/main.rs`.
 
-4. The code should automatically be inside `main.rs`. If not, add the following code to `main.rs` and save your file.
+4. There should already be code inside `main.rs`. Change "Hello, world!" to "Hello COMP 423". If the code is not there, add the following lines to `main.rs`.
 ``` title="main.rs"
 fn main() 
 {
-    println!("Hello World!");
+    println!("Hello COMP 423");
 }
 ```
 
